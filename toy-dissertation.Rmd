@@ -1,0 +1,35 @@
+---
+title: "Testing out a 3-chapter dissertation as child documents"
+date: "Last compiled `r Sys.Date()`"
+mainfont: Roboto
+bibliography: library.bib
+output:
+  #pdf_document:
+   # latex_engine: xelatex
+  bookdown::pdf_book:
+    latex_engine: xelatex
+---
+
+# The first chapter 
+
+```{r ch-1, child="./chapter-1/chapter-1-paper.Rmd"}
+
+```
+
+\clearpage
+
+# The second chapter 
+
+```{r ch-2, child="./chapter-2/chapter-2-paper.Rmd"}
+
+```
+
+
+\clearpage
+
+
+# The third chapter 
+
+```{r ch-3, child="./chapter-3/chapter-3-paper.Rmd"}
+
+```

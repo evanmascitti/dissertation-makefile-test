@@ -1,0 +1,63 @@
+---
+title: "The first chapter of my dissertation"
+date: "last compiled `r ecmfuns::ecm_timestamp()`"
+mainfont: Roboto
+output:
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+    number_sections: false
+    includes:
+      in_header: preamble.tex
+  bookdown::word_document2:
+    number_sections: false
+    toc: true
+    reference_docx: "oversizeAttLims-paper_word-doc-template.docx"
+bibliography: library.bib
+csl: soil-science-society-of-america-journal.csl
+linestretch: 1.5
+links-as-notes: no
+papersize: letter
+link-citations: yes
+mathfont: Fira Math Regular
+---
+
+```{r ch-1-setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(kableExtra)
+library(magrittr)
+```
+
+
+
+## Introduction 
+
+Some literature review. 
+
+A reference is [@Atterberg1974].
+
+## Materials and Methods 
+
+Blah blah blah
+
+See Table \@ref(tab:ch-1-table).
+
+```{r ch-1-table}
+mtcars %>% 
+  kbl(caption = "The mtcars dataset.")
+```
+
+
+## Results and Discussion
+
+Some results. See Figure \@ref(fig:mt-cars-plot)
+
+```{r mt-cars-plot, fig.cap='A plot from the mtcars dataset.'}
+knitr::include_graphics(path = here::here("chapter-1", "mt-cars-plot.png"))
+```
+
+
+## Conclusions 
+
+A conclusion.
+
+## References 

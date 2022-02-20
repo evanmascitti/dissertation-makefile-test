@@ -1,0 +1,16 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# dissertation-makefile-test
+
+This repo is to test how I am going to combine multiple dissertation chapters into a single R Markdown document, along with GNU Make. 
